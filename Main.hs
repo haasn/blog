@@ -31,7 +31,6 @@ main = hakyll $ do
             >>= (externalizeUrls $ feedRoot feedConfiguration)
             >>= saveSnapshot "content"
             >>= (unExternalizeUrls $ feedRoot feedConfiguration)
-            >>= loadAndApplyTemplate "templates/disqus.html" (tagsCtx tags)
             >>= loadAndApplyTemplate "templates/default.html" (tagsCtx tags)
             >>= relativizeUrls
 
@@ -125,11 +124,11 @@ tagsCtx tags =
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration = FeedConfiguration
-    { feedTitle       = "Clément Delafargue - RSS feed"
-    , feedDescription = "Musings about FP and CS"
-    , feedAuthorName  = "Clément Delafargue"
-    , feedAuthorEmail = "clement+blog@delafargue.name"
-    , feedRoot        = "http://blog.clement.delafargue.name"
+    { feedTitle       = "Niklas Haas - RSS feed"
+    , feedDescription = "Nothing to see here"
+    , feedAuthorName  = "Niklas Haas"
+    , feedAuthorEmail = "blog@haasn.xyz"
+    , feedRoot        = "https://haasn.xyz"
     }
 
 externalizeUrls :: String -> Item String -> Compiler (Item String)

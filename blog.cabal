@@ -7,8 +7,8 @@ version:             0.1.0.0
 -- description:         
 -- license:             
 license-file:        LICENSE
-author:              Clement Delafargue
-maintainer:          clement@delafargue.name
+author:              Clement Delafargue, Niklas Haas
+maintainer:          blog@haasn.xyz
 -- copyright:           
 -- category:            
 build-type:          Simple
@@ -20,7 +20,7 @@ executable blog
   -- other-modules:       
   -- other-extensions:    
   build-depends:
-      base >=4.7 && <4.8,
+      base >=4.7,
       text,
       hakyll >=4.3
   -- hs-source-dirs:      
