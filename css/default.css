@@ -4,11 +4,21 @@ body {
     margin: auto;
     padding: 1em;
     line-height: 1.4em;
+    color: #DCB;
+    background-color: #080C0D;
 }
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.1em;
     font-family: sans-serif;
+}
+
+a {
+    color: #FFAA0F;
+}
+
+a:visited {
+    color: #FF5D4A;
 }
 
 p {
@@ -17,6 +27,14 @@ p {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+}
+
+code, pre {
+    background-color: #222;
+}
+
+code {
+    padding: 0.5em;
 }
 
 pre {
