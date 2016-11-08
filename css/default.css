@@ -97,8 +97,18 @@ body>footer {
     margin-top: 10px;
 }
 
+.figure {
+    text-align: center;
+}
+
 .figure .caption {
     font-style: italic;
+}
+
+.figure .caption::before {
+    font-weight: bold;
+    content: "Figure:";
+    margin-right: 0.5em;
 }
 
 ins {
