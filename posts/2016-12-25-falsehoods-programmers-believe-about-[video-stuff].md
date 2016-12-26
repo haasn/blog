@@ -4,7 +4,8 @@ author: Niklas Haas
 tags: mpv, video
 ---
 
-Inspired by numerous other such lists of falsehoods.
+Inspired by numerous other such lists of falsehoods. Pretty much every video
+player in existence gets a good chunk if not the vast majority of these wrong.
 
 # Falsehoods programmers believe about..
 
