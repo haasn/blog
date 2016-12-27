@@ -119,6 +119,7 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 * there's only one BT.601 color space
 * TV range YCbCr is the same thing as TV range RGB
 * full-range YCbCr doesn't exist
+* color spaces are two-dimensional
 
 ## .. color conversion
 
@@ -139,6 +140,7 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 * all professional CMMs implement color conversion correctly
 * I don't need to dither after converting if the target colorspace is the same
   bit depth or higher
+* all ICC profiles contain tables for conversion in both directions
 
 ## .. video output
 
