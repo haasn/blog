@@ -186,6 +186,6 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 * I can paint RGB subtitles on top of my RGB video files
 * I don't need to worry about color management for subtitles
 * the subtitle color space will be the same as the video color space
-* rendering subtitles at the output resolution is better than rendering them
-  at the video resolution
+* rendering subtitles at the output resolution is always better than rendering
+  them at the video resolution
 * there's an ASS specification
