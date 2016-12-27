@@ -12,12 +12,28 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 ## .. video decoding
 
 * decoding is bit-exact, so the decoder used does not affect the quality
-* since H.264 decoding is bit-exact, the decoder used does not affect the quality
+* since H.264 decoding is bit-exact, the decoder used does not affect the quality[^bitexact]
 * hardware decoding means I don't have to worry about performance
 * hardware decoding is always faster than software decoding
 * a H.264 hardware decoder can decode all H.264 files
 * a H.264 software decoder can decode all H.264 files
 * video decoding is easily parallelizable
+
+[^bitexact]: It seems a lot of people have misunderstood this one, so let me
+    clarify what I mean: Of course, H.264 decoders (assuming no bugs) will
+    output the same result, but the problem in practice is that you have no
+    guarantee you'll actually be able to access the decoder outputs
+    unmodified, because APIs like DXVA/DXVA2, D3D11VA (through ANGLE),
+    CrystalHD, VAAPI through GLX and VDPAU (unless you use a terrible
+    interlaced-only hack) will further post process the results before you can
+    access them, either by converting to RGB, changing the subsampling or
+    rounding down 10-bit content down to 8-bit.
+
+    There are some APIs which are inherently safe, though, although it usually
+    requires copying back to system RAM instead of exposing it as an on-GPU
+    texture, so you gain extra round-trip bandwidth losses (bidirectional,
+    instead of the one-directional cost you have to pay for swdec). The only
+    exceptions I can think of right now are VAAPI EGL interop and CUDA.
 
 ## .. video playback
 
@@ -68,6 +84,7 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 * 4:2:0 is the only way to subsample images
 * all image files contain correct tags indicating their color space
 * interlaced video files no longer exist
+* I can detect whether a file is interlaced or not
 * the chroma location is the same for every YCbCr file
 * all HD videos are BT.709
 * video files will have the same refresh rate throughout the stream
@@ -80,6 +97,7 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 * I can start playing an audio file at the first decoded sample, and stop playing it
   at the last
 * virtual timelines can be implemented on the demuxer level
+* adjacent frames will have similar durations
 
 ## .. image scaling
 
