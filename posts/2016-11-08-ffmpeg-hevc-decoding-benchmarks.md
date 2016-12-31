@@ -20,11 +20,27 @@ Interestingly enough, the intra pred SIMD basically made no difference at all,
 even making the result slightly slower, but the IDCT still helped a lot.
 Looking at the code, I can't find an obvious explanation for this - the HEVC
 intra pred in FFmpeg is still very much C. Perhaps the compiler just does a
-good job of optimizing here, or perhaps the OpenHEVC intrinsics are just bad.
+good job of optimizing here, or perhaps the OpenHEVC intrinsics are just
+bad.[^1]
 
 Either way, seems like it's best to keep this patch off. I have adjusted
 [my own FFmpeg patches](https://github.com/haasn/gentoo-conf/tree/xor/etc/portage/patches/media-video/ffmpeg)
 accordingly.
+
+[^1]: BBB from the #ffmpeg-devel IRC offers this explanation:
+```
+2016-12-31 16:17:29	@BBB	haasn: the reason intra pred simd doesn’t help is b/c most intra pred is dc, and dc is very trivial in c or simd
+2016-12-31 16:17:39	@BBB	haasn: runtime of dc C vs. idct C is like 1:10 or so
+2016-12-31 16:17:57	@BBB	haasn: directional intra pred is more complicated, but runs sparsely
+2016-12-31 16:18:22	@BBB	(from my memory)
+2016-12-31 16:52:10	haasn	BBB: I did a `perf` and the most time was spent in that hevc_cabac function
+2016-12-31 16:52:11	haasn	or w/e
+2016-12-31 16:55:49	@BBB	haasn: yeah that’s residual decoding, that is normal
+2016-12-31 16:55:57	@BBB	haasn: unfortunately not really simd'able
+2016-12-31 16:56:03	@BBB	I guess you can try simd’ing the bypass function
+2016-12-31 16:56:06	@BBB	but that’s hard
+2016-12-31 16:56:10	@BBB	and I Don’t care about hevc ;)
+```
 
 ## Time to decode vs. number of threads
 
