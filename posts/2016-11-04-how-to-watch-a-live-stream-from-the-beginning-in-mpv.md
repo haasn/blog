@@ -12,7 +12,7 @@ The fix is straightforward: By appending `?t=0m` you can force it to start at
 the beginning:
 
 
-```shell
+```bash
 mpv 'https://www.twitch.tv/example/v/12345?t=0'
 ```
 
