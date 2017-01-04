@@ -29,24 +29,6 @@ p {
     hyphens: auto;
 }
 
-code, pre {
-    background-color: #222;
-    border: 1px dashed #555;
-}
-
-pre > code {
-    border: none;
-}
-
-code {
-    padding: 0.3em;
-}
-
-pre {
-    padding: 1em;
-    overflow-x: auto;
-}
-
 body>header h1 {
     font-size: 2.2em;
 }
