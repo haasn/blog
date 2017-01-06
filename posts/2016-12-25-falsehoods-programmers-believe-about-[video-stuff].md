@@ -98,6 +98,9 @@ player in existence gets a good chunk if not the vast majority of these wrong.
   at the last
 * virtual timelines can be implemented on the demuxer level
 * adjacent frames will have similar durations
+* all multimedia formats have easily identifiable headers
+* [a file will never be a legal JPEG and MP3 at the same time](https://github.com/mpv-player/mpv/issues/3973)
+* applying heuristics to guess the right filetype is easy
 
 ## .. image scaling
 
