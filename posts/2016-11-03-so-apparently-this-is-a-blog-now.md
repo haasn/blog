@@ -5,9 +5,9 @@ tags: meta, personal
 ---
 
 I just copied the template and code from
-[http://blog.clement.delafargue.name/](this guy's blog) because it was the
-first thing in [https://jaspervdj.be/hakyll/examples.html](this list of Hakyll
-examples) that looked reasonably nice (and I was too lazy to look at more).
+[this guy's blog](http://blog.clement.delafargue.name/) because it was the
+first thing in [this list of Hakyll examples](https://jaspervdj.be/hakyll/examples.html)
+that looked reasonably nice (and I was too lazy to look at more).
 
 ## Why?
 
