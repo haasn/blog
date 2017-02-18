@@ -4,6 +4,10 @@ author: Niklas Haas
 tags: diablo3
 ---
 
+**Update 2017-02-18**: The XP/level curve I was using in the first iteration of this post
+was based on a previous version of the game. The current XP curve paints a
+very different picture. I have updated the graphs.
+
 Since it was bugging me, I decided to visualize some of the relationships
 between playtime, paragon, greater rifts and power levels.
 
@@ -149,17 +153,20 @@ interesting things.
 
 All this is well and good, but my main interest lies in how all of these stats
 correlate with actual playtime. So first, we need to figure out how XP scaling
-works. Since we're only interested in p800+, we can subdivide the paragon levels
-into two halves:
+works.
 
-There's a p800-2000 segment, which increases linearly starting from 23 (billion)
-and ending at 170. After that, it's constant at 170b XP per level.
+As of patch 2.4.2 (S8), the paragon curve above p800 is subdivided into two
+halves: There's a p800-2250 segment, which increases linearly starting from 23
+(billion) and ending at 200. After that, it increases quadratically, gaining by
+102 thousand per level.
 
 ```haskell
 xpLevel(paraLevel)
-  | paraLevel < 2000 = 23 + (paraLevel - 800) * bonusXP
-  | otherwise        = 170
-  where bonusXP = (170 - 23) / (2000 - 800)
+  | paraLevel <= 2250 = lerp (800, 23) (2250, 200)
+  | otherwise         = 200 + 0.229602 * bonusPara + 0.000051 * bonusPara^2
+
+  where lerp (a,x) (b,y) = x + (paraLevel - a) / (b - a) * (y - x)
+        bonusPara        = paraLevel - 2250
 ```
 
 ![XP (b) needed to gain a paragon level](/files/d3para/xpLevel.png)
@@ -205,6 +212,10 @@ paraHours = go 800 0 where
 
 ![Paragon level as a function of farm time](/files/d3para/paraHours.png)
 
+![Paragon level as a function of farm time (zoom)](/files/d3para/paraHoursZoom.png)
+
+To reach paragon 10,000, one has to play for about 30k hours ≈ 3-4 ingame years.
+
 ## GR level per hour of playtime
 
 Finally, since this is the result I was ultimately interested in, the GR level
@@ -216,11 +227,15 @@ riftHours = [ (hours, riftLevelPara(paraLevel)) | (hours, paraLevel) <- paraHour
 
 ![GR level as a function of farm time](/files/d3para/riftHours.png)
 
+![GR level as a function of farm time (zoom)](/files/d3para/riftHoursZoom.png)
+
 
 # Summary
 
-In summary, game time seems to correlate more or less linearly with the GR level
-increase you're getting out of it, at least in terms of the paragon system.
+In summary, how much benefit you get out of the paragon system slows down over
+time, culminating in the point where you need to invest exponentially increasing
+amounts of gametime to reach the next GR level.
+
 Might be slightly skewed towards the upper end due to the effects of decreasing
 incoming damage, but I don't have a good model for that.
 
