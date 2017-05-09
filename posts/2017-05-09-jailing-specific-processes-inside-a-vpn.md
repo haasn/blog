@@ -145,9 +145,9 @@ followed by `sysctl -p`.
 If it still doesn't work, you may need to flush the routing cache, i.e. `ip
 route flush cache`.
 
-## Disclaimer and warning
+# Disclaimer and warning
 
-### A word on DNS
+## A word on DNS
 
 If you use a local DNS server (e.g. one pushed by your DHCP server), then DNS
 lookups from the `confined` user will fail, because there's no appropriate
@@ -161,7 +161,7 @@ While #3 seems the most attractive, this is a privacy risk because DNS
 requests will leak your real IP! Only do this if you're sure you know what
 you're signing yourself up for.
 
-### Other sources of IP leaks
+## Other sources of IP leaks
 
 It's possible that all your effort will be for naught and your client will
 find other ways of leaking your ‘real’ IP to the internet. Unless you have
