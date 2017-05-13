@@ -142,6 +142,7 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 * full-range YCbCr doesn't exist
 * standards bodies can agree on what full-range YCbCr means
 * b-bit full range means the interval [0, 2^b-1]
+* a full range 8-bit color value of 255 maps to the float 1.0
 * color spaces are two-dimensional
 * information outside of the interval [0,1] should always be discarded/clamped
 * all gamma curves are well defined outside of the interval [0,1]
@@ -166,6 +167,7 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 * I don't need to dither after converting if the target colorspace is the same
   bit depth or higher
 * converting between bit depths is just a logical shift
+* converting between bit depths is just a multiplication
 * all ICC profiles contain tables for conversion in both directions
 
 ## .. video output
