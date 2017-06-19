@@ -1,6 +1,6 @@
 # Grace project file
 #
-@version 50123
+@version 50125
 @page size 800, 618
 @page scroll 5%
 @page inout 5%
@@ -54,7 +54,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Mon Nov  7 01:40:14 2016"
+@timestamp def "Tue Jun 20 00:32:27 2017"
 @r0 off
 @link r0 to g0
 @r0 type above
@@ -101,7 +101,7 @@
 @g0 fixedpoint format general general
 @g0 fixedpoint prec 6, 6
 @with g0
-@    world 0, 0, 33, 320
+@    world 0, 0, 34, 18
 @    stack world 0, 0, 0, 0
 @    znorm 1
 @    view 0.150000, 0.150000, 1.150000, 0.850000
@@ -175,7 +175,7 @@
 @    yaxis  bar color 7
 @    yaxis  bar linestyle 1
 @    yaxis  bar linewidth 1.0
-@    yaxis  label "seconds"
+@    yaxis  label "speedup"
 @    yaxis  label layout para
 @    yaxis  label place auto
 @    yaxis  label char size 1.480000
@@ -183,8 +183,8 @@
 @    yaxis  label color 7
 @    yaxis  label place normal
 @    yaxis  tick on
-@    yaxis  tick major 100
-@    yaxis  tick minor ticks 3
+@    yaxis  tick major 5
+@    yaxis  tick minor ticks 4
 @    yaxis  tick default 6
 @    yaxis  tick place rounded true
 @    yaxis  tick in
@@ -271,7 +271,7 @@
 @    s0 fill pattern 1
 @    s0 avalue off
 @    s0 avalue type 2
-@    s0 avalue char size 0.490000
+@    s0 avalue char size 1.000000
 @    s0 avalue font 0
 @    s0 avalue color 1
 @    s0 avalue rot 0
@@ -279,7 +279,7 @@
 @    s0 avalue prec 3
 @    s0 avalue prepend ""
 @    s0 avalue append ""
-@    s0 avalue offset 0.000000 , 0.005000
+@    s0 avalue offset 0.000000 , 0.000000
 @    s0 errorbar on
 @    s0 errorbar place both
 @    s0 errorbar color 14
@@ -291,7 +291,7 @@
 @    s0 errorbar riser linestyle 1
 @    s0 errorbar riser clip off
 @    s0 errorbar riser clip length 0.100000
-@    s0 comment "results"
+@    s0 comment "/home/nand/dev/blog/files/ffmpeg-threads/foo"
 @    s0 legend  "Sony 4K HDR Camp"
 @    s1 hidden false
 @    s1 type xy
@@ -322,7 +322,7 @@
 @    s1 avalue type 2
 @    s1 avalue char size 1.000000
 @    s1 avalue font 0
-@    s1 avalue color 7
+@    s1 avalue color 1
 @    s1 avalue rot 0
 @    s1 avalue format general
 @    s1 avalue prec 3
@@ -340,7 +340,7 @@
 @    s1 errorbar riser linestyle 1
 @    s1 errorbar riser clip off
 @    s1 errorbar riser clip length 0.100000
-@    s1 comment "Editor"
+@    s1 comment "/home/nand/dev/blog/files/ffmpeg-threads/foo"
 @    s1 legend  "LG 4K HDR Chess"
 @    s2 hidden false
 @    s2 type xy
@@ -389,7 +389,7 @@
 @    s2 errorbar riser linestyle 1
 @    s2 errorbar riser clip off
 @    s2 errorbar riser clip length 0.100000
-@    s2 comment "/mem/results3"
+@    s2 comment "/home/nand/dev/blog/files/ffmpeg-threads/foo"
 @    s2 legend  "Jellyfish 110 Mbps HD"
 @    s3 hidden false
 @    s3 type xy
@@ -438,145 +438,145 @@
 @    s3 errorbar riser linestyle 1
 @    s3 errorbar riser clip off
 @    s3 errorbar riser clip length 0.100000
-@    s3 comment "/mem/results4"
+@    s3 comment "/home/nand/dev/blog/files/ffmpeg-threads/foo"
 @    s3 legend  "2015.03.01 4K J-pop sample"
 @target G0.S0
 @type xy
-1 307.03
-2 163.13
-3 137.74
-4 90.92
-5 83.27
-6 74.76
-7 62.98
-8 58.597
-9 54.611
-10 52.719
-11 50.341
-12 46.997
-13 46.206
-14 43.837
-15 42.951
-16 43.129
-17 42.707
-18 41.902
-19 41.799
-20 41.967
-21 42.681
-22 41.725
-23 41.576
-24 41.129
-25 41.152
-26 40.914
-27 40.537
-28 40.674
-29 39.628
-30 40.006
-31 40.153
-32 40.058
+1 1
+2 1.8821186
+3 2.2290547
+4 3.3769248
+5 3.6871622
+6 4.1068753
+7 4.8750397
+8 5.239688
+9 5.6221274
+10 5.8238965
+11 6.0990048
+12 6.5329702
+13 6.644808
+14 7.0039008
+15 7.1483784
+16 7.1188759
+17 7.1892196
+18 7.3273352
+19 7.345391
+20 7.3159864
+21 7.193599
+22 7.3584182
+23 7.3847893
+24 7.465049
+25 7.4608767
+26 7.5042773
+27 7.5740681
+28 7.5485568
+29 7.7478046
+30 7.6745988
+31 7.6465021
+32 7.6646363
 &
 @target G0.S1
 @type xy
-1 292.99
-2 166.7
-3 144.74
-4 121.12
-5 120.04
-6 108.71
-7 91.96
-8 74.36
-9 69.61
-10 69.14
-11 68.68
-12 68.72
-13 68.1
-14 61.55
-15 54.368
-16 51.969
-17 51.941
-18 51.915
-19 51.247
-20 50.851
-21 50.518
-22 46.581
-23 43.283
-24 42.965
-25 43.147
-26 43.085
-27 43.109
-28 42.617
-29 43.438
-30 40.702
-31 38.765
-32 38.7
+1 1
+2 1.7575885
+3 2.0242504
+4 2.4190059
+5 2.4407697
+6 2.6951522
+7 3.1860592
+8 3.940156
+9 4.2090217
+10 4.2376338
+11 4.2660163
+12 4.2635332
+13 4.3023495
+14 4.760195
+15 5.3890156
+16 5.6377841
+17 5.6408232
+18 5.6436483
+19 5.7172127
+20 5.7617353
+21 5.799715
+22 6.2899036
+23 6.7691703
+24 6.8192715
+25 6.7905069
+26 6.8002785
+27 6.7964926
+28 6.874956
+29 6.7450159
+30 7.1984178
+31 7.5581065
+32 7.570801
 &
 @target G0.S2
 @type xy
-1 77.77
-2 39.938
-3 29.062
-4 23.529
-5 17.531
-6 16.545
-7 14.666
-8 12.966
-9 13.359
-10 13.576
-11 13.429
-12 13.432
-13 12.746
-14 12.956
-15 13.061
-16 12.845
-17 13.228
-18 13.16
-19 12.57
-20 13.022
-21 13.475
-22 12.704
-23 12.979
-24 12.877
-25 12.566
-26 13.057
-27 12.534
-28 13.007
-29 12.544
-30 12.609
-31 12.367
-32 12.571
+1 1
+2 1.9472683
+3 2.676003
+4 3.3052828
+5 4.4361417
+6 4.7005138
+7 5.302741
+8 5.9979948
+9 5.8215435
+10 5.7284915
+11 5.7911982
+12 5.7899047
+13 6.101522
+14 6.0026243
+15 5.954368
+16 6.0544959
+17 5.8791956
+18 5.9095745
+19 6.1869531
+20 5.9722009
+21 5.7714286
+22 6.121694
+23 5.9919871
+24 6.0394502
+25 6.1889225
+26 5.9561921
+27 6.2047232
+28 5.9790882
+29 6.1997768
+30 6.1678166
+31 6.2885097
+32 6.1864609
 &
 @target G0.S3
 @type xy
-1 220.63
-2 119.67
-3 103.74
-4 65.39
-5 61.87
-6 60.47
-7 45.216
-8 44.594
-9 43.507
-10 39.659
-11 39.535
-12 36.524
-13 34.913
-14 34.145
-15 31.905
-16 27.584
-17 27.905
-18 26.901
-19 26.663
-20 26.793
-21 25.842
-22 25.917
-23 25.767
-24 25.172
-25 25.035
-26 24.924
-27 24.235
-28 23.72
-29 24.14
-30 23.244
-31 21.821
-32 21.623
+1 1
+2 1.8436534
+3 2.1267592
+4 3.3740633
+5 3.5660255
+6 3.6485861
+7 4.8794674
+8 4.9475266
+9 5.071138
+10 5.5631761
+11 5.5806248
+12 6.0406856
+13 6.3194226
+14 6.461561
+15 6.9152171
+16 7.9984774
+17 7.9064684
+18 8.2015538
+19 8.2747628
+20 8.2346135
+21 8.5376519
+22 8.5129452
+23 8.5625024
+24 8.7648975
+25 8.812862
+26 8.8521104
+27 9.1037755
+28 9.3014334
+29 9.1396023
+30 9.4919119
+31 10.110902
+32 10.203487
 &

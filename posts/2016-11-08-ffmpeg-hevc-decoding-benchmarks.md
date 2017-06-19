@@ -51,4 +51,4 @@ few cores.
 Tests were done using ffmpeg version `N-82215-g3932ccc` with both OpenHEVC
 intrinsics patches applied.
 
-![Time to decode 3000 frames ([large](/files/ffmpeg-threads/full.png), [SVG](/files/ffmpeg-threads/full.svg))](/files/ffmpeg-threads/img.png)
+![Speedup decoding 3000 frames](/files/ffmpeg-threads/img.png)
