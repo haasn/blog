@@ -6,6 +6,7 @@ tags: mpv, video
 
 Inspired by numerous other such lists of falsehoods. Pretty much every video
 player in existence gets a good chunk if not the vast majority of these wrong.
+(Some of these also/mostly apply to users, though)
 
 # Falsehoods programmers believe about..
 
@@ -144,8 +145,11 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 * b-bit full range means the interval [0, 2^b-1]
 * a full range 8-bit color value of 255 maps to the float 1.0
 * color spaces are two-dimensional
+* “linear light” means “linear light”
 * information outside of the interval [0,1] should always be discarded/clamped
 * all gamma curves are well defined outside of the interval [0,1]
+* HDR encoding is about making the image brighter
+* HDR encoding means darker blacks
 
 ## .. color conversion
 
@@ -162,6 +166,7 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 * converting from A to B is just the inverse of converting from B to A
 * the OOTF is conceptually part of the OETF
 * the OOTF is conceptually part of the EOTF
+* all OOTFs are reversible
 * all CMMs implement color conversion correctly
 * all professional CMMs implement color conversion correctly
 * I don't need to dither after converting if the target colorspace is the same
@@ -169,6 +174,15 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 * converting between bit depths is just a logical shift
 * converting between bit depths is just a multiplication
 * all ICC profiles contain tables for conversion in both directions
+* HDR tone-mapping is well-defined
+* HDR tone-mapping is well-defined if you know the source and target display
+  capabilities
+* HDR metadata will always match the video stream
+* you can easily convert between PQ and HLG
+* you can easily convert between PQ and HLG if you know the mastering
+  display's metadata
+* converting from A to linear light to B gives you the same result as
+  converting from A to B
 
 ## .. video output
 
