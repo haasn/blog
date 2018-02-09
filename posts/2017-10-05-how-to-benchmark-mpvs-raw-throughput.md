@@ -27,6 +27,7 @@ untimed=yes
 video-sync=display-desync
 vulkan-swap-mode=immediate
 opengl-swapinterval=0
+d3d11-sync-interval=0
 osd-msg1="FPS: ${estimated-display-fps}"
 ```
 
