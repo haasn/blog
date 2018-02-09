@@ -1,49 +1,34 @@
-/* Code blocks etc */
-pre.sourceCode {
-    padding-left: 1em;
-}
-
-/* Normal code blocks */
-div.sourceCode {
-    background-color: #0b0e0f;
-    border: 1px dashed #555;
-    overflow-x: auto;
-}
-
 /* Inline code */
 p > code {
     background-color: #111313;
     border: 1px dashed #555;
-    padding: 0.3em;
+    margin: 0.3em;
 }
 
-/* Table-based code with line numbers */
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-    margin: 0; padding: 0; vertical-align: baseline; border: none;
+/* Code blocks */
+pre.sourceCode {
+    background-color: #0b0e0f;
+    border: 1px dashed #555;
+    overflow-x: auto;
+    line-height: 120%;
+    margin-bottom: 1em;
 }
 
-table.sourceCode {
-    width: 100%; line-height: 100%;
-}
-
-td.lineNumbers {
-    background-color: black;
-    color: #585858;
-    text-align: right;
-    padding-right: 0.6em;
+code.sourceCode > div.sourceLine {
+    display: inline;
 }
 
 /* Syntax highlighting */
-code > span.kw { color: #ffa600; } /* Keyword */
-code > span.dt { color: #85c600; } /* DataType */
-code > span.dv { color: #e0374f; } /* DecVal */
-code > span.bn { color: #e0374f; } /* BaseN */
-code > span.fl { color: #e0374f; } /* Float */
-code > span.ch { color: #e0374f; } /* Char */
-code > span.st { color: #e0374f; } /* String */
-code > span.co { color: #0099bc; } /* Comment */
-code > span.ot { color: #e50c88; } /* Other */
-code > span.al { color: #e0374f; } /* Alert */
-code > span.fu { color: #d78787; } /* Function */
-code > span.re { } /* RegionMarker */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.kw { color: #ffa600; } /* Keyword */
+code span.dt { color: #85c600; } /* DataType */
+code span.dv { color: #e0374f; } /* DecVal */
+code span.bn { color: #e0374f; } /* BaseN */
+code span.fl { color: #e0374f; } /* Float */
+code span.ch { color: #e0374f; } /* Char */
+code span.st { color: #e0374f; } /* String */
+code span.co { color: #0099bc; } /* Comment */
+code span.ot { color: #e50c88; } /* Other */
+code span.al { color: #e0374f; } /* Alert */
+code span.fu { color: #d78787; } /* Function */
+code span.re {                 } /* RegionMarker */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
