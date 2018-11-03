@@ -69,6 +69,7 @@ player in existence gets a good chunk if not the vast majority of these wrong.
 * the duration of the final video frame is always known
 * users will not notice if I skip the final video frame
 * users will never want to play videos in reverse
+* users will not notice if I skip a video frame when pausing
 
 ## .. video/image files
 
