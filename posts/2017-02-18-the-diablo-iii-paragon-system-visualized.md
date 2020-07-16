@@ -1,7 +1,7 @@
 ---
 title: The Diablo III paragon system visualized
 author: Niklas Haas
-tags: diablo3
+tags: games
 ---
 
 **Update 2017-02-18**: The XP/level curve I was using in the first iteration of this post
