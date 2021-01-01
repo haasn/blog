@@ -1,4 +1,4 @@
 #!/bin/sh
 umask 022
-dist/build/blog/blog clean
-dist/build/blog/blog watch
+dist-newstyle/build/x86_64-linux/ghc-8.10.3/blog-0.1.0.0/x/blog/build/blog/blog clean
+dist-newstyle/build/x86_64-linux/ghc-8.10.3/blog-0.1.0.0/x/blog/build/blog/blog watch
