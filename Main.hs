@@ -127,8 +127,8 @@ feedConfiguration = FeedConfiguration
     { feedTitle       = "Niklas Haas - RSS feed"
     , feedDescription = "Nothing to see here"
     , feedAuthorName  = "Niklas Haas"
-    , feedAuthorEmail = "blog@haasn.xyz"
-    , feedRoot        = "https://haasn.xyz"
+    , feedAuthorEmail = "blog@haasn.dev"
+    , feedRoot        = "https://haasn.dev"
     }
 
 externalizeUrls :: String -> Item String -> Compiler (Item String)
